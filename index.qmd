@@ -1,5 +1,6 @@
 ---
 title: "Basic Needs & Student Success Survey"
+subtitle: "CSU Results"
 format:
   html:
     anchor-sections: false
@@ -12,22 +13,18 @@ library(dplyr)
 library(ggplot2)
 
 # 1) Create Vector of Names of Schools
-Names <- c("Allan Hancock CC (n = 112)", "Butte CC (n = 132)" ,
-           "Mt. SAC CC (n = 270)", "Clovis CC (n = 140)", 
-           "Palo Verde CC (n = 36)",
-           "Cal State San Bernardino (n = 191)", 
+Names <- c("Cal State San Bernardino (n = 191)", 
            "CSU Bakersfield (n = 114)", "Sacramento State (n = 253)",
            "CSU Dominguez Hills (n = 58)", 
            "San Francisco State (n = 279)", 
-           "Cal State LA (n = 343)", "UC Berkeley (n = 182)", NA)
+           "Cal State LA (n = 343)", NA)
 
 
 # 2) Set Lat (from Google Maps)
-Lat <- c(34.944806751448446, 39.64865964609286, 34.04908827552049, 36.8881247883413, 33.661194382241, 34.181456718923286, 35.3488035843719, 38.56494552780801, 33.862538254060354, 37.72428800979904, 34.0664952125493, 37.87032035949273, NA)
+Lat <- c(34.181456718923286, 35.3488035843719, 38.56494552780801, 33.862538254060354, 37.72428800979904, 34.0664952125493, NA)
 
 # 3) Set Long (from Google Maps)
-Long <- c(-120.41904099310837, -121.6448880602949, -117.84283323764328,  -119.73237338219428,  -114.6528941759761,  -117.3231769109331, -119.1034047186511, -121.42779950825016,  -118.25447517782001, -122.48003539894094, -118.1684245606096,
-          -122.25952497759987, NA)
+Long <- c(-117.3231769109331, -119.1034047186511, -121.42779950825016,  -118.25447517782001, -122.48003539894094, -118.1684245606096, NA)
 
 # 4) Merge Vectors as data frame
 coord_data <- cbind(Names, Lat, Long) %>% as.data.frame()
@@ -44,9 +41,10 @@ map_and_data <- merge(cali_map, coord_data)
 
 ## Overview
 
--   The [Center for Healthy Communities](https://chcchicostate.org/) (CHC) developed the **Basic Needs and Student Success Survey (BNS3)** and administered it to undergraduate students participating in the [Educational Opportunity Program (EOP)](https://www2.calstate.edu/attend/student-services/eop) or the Extended Opportunity Programs and Services (EOPS) at 12 colleges across the CSU, CCC, and UC systems from 2022 to 2023.
--   This site provides a top level descriptive analysis of each question in the survey.
-
+- The [Center for Healthy Communities](https://chcchicostate.org/) (CHC) developed the **Basic Needs and Student Success Survey (BNS3)** and administered it to undergraduate students participating in the [Educational Opportunity Program (EOP)](https://www2.calstate.edu/attend/student-services/eop) or the Extended Opportunity Programs and Services (EOPS) at 12 colleges across the CSU, CCC, and UC systems from 2022 to 2023.
+- This site provides a top level descriptive analysis of each question in the survey for the **CSU Campuses ONLY (n = `r nrow(bns)` students)**
+  - [Click here](https://chicocalfresh.github.io/BNS3_Statewide_Summary/) to view the combined results for all 12 campuses.
+  
 ## Purpose
 
 The main purpose of this third cross-sectional study was to evaluate the following:
@@ -63,7 +61,7 @@ The main purpose of this third cross-sectional study was to evaluate the followi
 -   Participants were given a \$25 gift card incentive for completing the survey.
 -   EOP/EOPS students were identified as the target population for this survey based on their low-income and first-generation student status, which indicates a higher probability of using CalFresh Food and being likely eligible for CalFresh Food.
 
-A total of 2,110 EOP/EOPS students in California were surveyed from the following campuses:
+A total of **`r nrow(bns)` EOP/EOPS students** were surveyed from the CSU campuses.
 
 <a id="md"></a>
 
@@ -98,13 +96,7 @@ Center for Healthy Communities. (2023). Statewide Basic Needs and Student Succes
 
 ## Related Work
 
--   [Pilot 1 Basic Needs and Student Success Survey](https://chicocalfresh.github.io/BNS-Pilot1-website/index.html)
--   [Pilot 2 Basic Needs and Student Success Survey](https://chicocalfresh.github.io/bns-pilot2-website/index.html)
--   [Pilot 2 Basic Needs and Student Success Survey, CSU Chico Results](https://chicocalfresh.github.io/bns-pilot2-chico/)
--   [Pilot 2 Basic Needs and Student Success Survey, CSU Northridge Results](https://chicocalfresh.github.io/bns-pilot2-csun/)
--   [Pilot 2 Basic Needs and Student Success Survey, Fresno State Results](https://chicocalfresh.github.io/bns-pilot2-fresno/)
--   [Statewide Exploration of Students Eligible for but Not Receiving CalFresh](eligible_not_receiving.html)
--   [Presentation at the Conference for Statistical Practice (2023): Reducing costs, burden, and risk of human error in large scale survey data collection and Scope of Work reporting using Automation](https://chicocalfresh.github.io/CSP2023/)
+- [Statewide Basic Needs and Student Success Survey](https://chicocalfresh.github.io/BNS3_Statewide_Summary/)
 
 <br/>
 
