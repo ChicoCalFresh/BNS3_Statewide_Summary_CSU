@@ -45,7 +45,7 @@ Students were asked to report information relating to their current and past hou
 #| fig-height: 3.5
 #| fig-width: 4.5
 #| fig-cap: !expr sprintf("%s Students Living Near Their College %s.", NextFigure(), print_n_reporting('q24'))
-plot_frq(bns$q24, geom.colors = plot_color, ylim=c(0,1800)) + xlab('') + ylab("Number of Students")
+plot_frq(bns$q24, geom.colors = plot_color, ylim=c(0,1200)) + xlab('') + ylab("Number of Students")
 ```
 :::
 
@@ -169,7 +169,7 @@ full_join(get.month.vars, get.year.vars) %>%
 
 **Survey Question:** *In the last 30 days, or in the past 12 months, have you slept in any of the following places? (Select all that apply)*
 
-**Additional Notes: ** The n count next to each question represents the number of students reporting out of 2,111 students. As a reminder, students had the option to select multiple options for each question. 
+**Additional Notes: ** The n count next to each question represents the number of students reporting out of `r nrow(bns)` students. As a reminder, students had the option to select multiple options for each question. 
 
 **Summary: ** In the past 12 months, `r get_count_and_percent(bns$q36_4_year, "1")` students reported sleeping in a rented/owned property with family, while `r get_count_and_percent(bns$q36_3_year, "1")` reported sleeping in a rented/owned property alone or with roommates. Additionally, in the past 12 months, `r get_count_and_percent(bns$q36_6_year, "1")` reported temporarily staying with a relative/friend or couch surfing until they find other housing, while `r get_count_and_percent(bns$q36_11_year, "1")` reported sleeping in a car, truck, van, RV, or camper. 
 
@@ -281,7 +281,7 @@ plot_frq(bns$q35, geom.colors = plot_color, wrap.labels =10) + xlab('') + ylab("
 #| fig-width: 4.5
 #| fig-cap: !expr sprintf("%s Sleeping Location Uncertainty %s.", NextFigure(), print_n_reporting('q34'))
 
-plot_frq(bns$q34, geom.colors = plot_color, wrap.title=40, wrap.labels =12, ylim=c(0,1850)) + xlab('') + ylab("Number of Students")
+plot_frq(bns$q34, geom.colors = plot_color, wrap.title=40, wrap.labels =12, ylim=c(0,1250)) + xlab('') + ylab("Number of Students")
 
 ```
 
@@ -299,7 +299,7 @@ plot_frq(bns$q34, geom.colors = plot_color, wrap.title=40, wrap.labels =12, ylim
 #| fig-width: 9
 #| fig-cap: !expr sprintf("%s Most Common Reason for Experiencing Unstable Housing %s.", NextFigure(), print_n_reporting('q37'))
 
-plot_frq(bns$q37, geom.colors = plot_color, wrap.labels = 17, ylim=c(0,1600), sort.frq = 'desc') + xlab('') + ylab("Number of Students") + theme(axis.text.x = element_text(size = 10))
+plot_frq(bns$q37, geom.colors = plot_color, wrap.labels = 17, ylim=c(0,1000), sort.frq = 'desc') + xlab('') + ylab("Number of Students") + theme(axis.text.x = element_text(size = 10))
 ```
 
 **Survey Question:** *In the past 12 months, if you have experienced unstable housing, what was the most common reason?*
@@ -321,7 +321,7 @@ plot_frq(bns$q37, geom.colors = plot_color, wrap.labels = 17, ylim=c(0,1600), so
 #| fig-cap: !expr sprintf("%s COVID-19 Housing Impact %s.", NextFigure(), print_n_reporting('q23'))
 
 
-plot_frq(bns$q23, geom.colors = plot_color, ylim=c(0,2150)) + xlab('') + ylab("Number of Students")
+plot_frq(bns$q23, geom.colors = plot_color, ylim=c(0, 1.3*max(table(bns$q23)))) + xlab('') + ylab("Number of Students")
 
 ```
 :::

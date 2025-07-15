@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BNS3 Statewide - Physical Activity</title>
+<title>Physical Activity – BNS3 - CSU</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -44,7 +44,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -53,14 +59,16 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
-
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 </head>
@@ -69,81 +77,81 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">BNS3 Statewide</span>
+    <span class="navbar-title">BNS3 - CSU</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demographics" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demographics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Demographics</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-demographics">    
         <li>
-    <a class="dropdown-item" href="./Demographics.html" rel="" target="">
+    <a class="dropdown-item" href="./Demographics.html">
  <span class="dropdown-text">Personal Demographics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Academic_Profile.html" rel="" target="">
+    <a class="dropdown-item" href="./Academic_Profile.html">
  <span class="dropdown-text">Academic Profile</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Workload.html" rel="" target="">
- <span class="menu-text">Workload</span></a>
+    <a class="nav-link" href="./Workload.html"> 
+<span class="menu-text">Workload</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Housing.html" rel="" target="">
- <span class="menu-text">Housing</span></a>
+    <a class="nav-link" href="./Housing.html"> 
+<span class="menu-text">Housing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./CalFresh.html" rel="" target="">
- <span class="menu-text">CalFresh Food</span></a>
+    <a class="nav-link" href="./CalFresh.html"> 
+<span class="menu-text">CalFresh Food</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Other_Basic_Needs.html" rel="" target="">
- <span class="menu-text">Other Basic Needs</span></a>
+    <a class="nav-link" href="./Other_Basic_Needs.html"> 
+<span class="menu-text">Other Basic Needs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Food_Security.html" rel="" target="">
- <span class="menu-text">Food Security</span></a>
+    <a class="nav-link" href="./Food_Security.html"> 
+<span class="menu-text">Food Security</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other-health-variables" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other-health-variables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Other Health Variables</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-other-health-variables">    
         <li>
-    <a class="dropdown-item" href="./Eating_Habits.html" rel="" target="">
+    <a class="dropdown-item" href="./Eating_Habits.html">
  <span class="dropdown-text">Eating Habits</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Physical_Activity.html" rel="" target="">
+    <a class="dropdown-item" href="./Physical_Activity.html">
  <span class="dropdown-text">Physical Activity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Mental_Health.html" rel="" target="">
+    <a class="dropdown-item" href="./Mental_Health.html">
  <span class="dropdown-text">Mental Health</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -180,16 +188,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Students were asked to select how many days in the last week they had done any of the following exercise types: <a href="#Footnotes">moderate, vigorous, or strength training exercises.<sup>1</sup></a></p>
 <p><em>See <a href="./index.html#md">Information on Missing Data</a></em></p>
 <section id="Physical-Activity-Type" class="level2">
 <h2 data-anchor-id="Physical-Activity-Type">Physical Activity Type</h2>
 <div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table 9.1. Physical Activity Patterns. </caption>
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 9.1. Physical Activity Patterns.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th"></th>
@@ -217,61 +226,60 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">Moderate Exercise</td>
-<td style="text-align: left;">565 (30.4%)</td>
-<td style="text-align: left;">288 (15.5%)</td>
-<td style="text-align: left;">313 (16.8%)</td>
-<td style="text-align: left;">280 (15.1%)</td>
-<td style="text-align: left;">157 (8.4%)</td>
-<td style="text-align: left;">150 (8.1%)</td>
-<td style="text-align: left;">34 (1.8%)</td>
-<td style="text-align: left;">73 (3.9%)</td>
+<td style="text-align: left;">333 (30.4%)</td>
+<td style="text-align: left;">169 (15.4%)</td>
+<td style="text-align: left;">161 (14.7%)</td>
+<td style="text-align: left;">173 (15.8%)</td>
+<td style="text-align: left;">99 (9.0%)</td>
+<td style="text-align: left;">99 (9.0%)</td>
+<td style="text-align: left;">25 (2.3%)</td>
+<td style="text-align: left;">37 (3.4%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Strength Training</td>
-<td style="text-align: left;">898 (48.4%)</td>
-<td style="text-align: left;">325 (17.5%)</td>
-<td style="text-align: left;">251 (13.5%)</td>
-<td style="text-align: left;">150 (8.1%)</td>
-<td style="text-align: left;">101 (5.4%)</td>
-<td style="text-align: left;">94 (5.1%)</td>
-<td style="text-align: left;">23 (1.2%)</td>
-<td style="text-align: left;">14 (0.8%)</td>
+<td style="text-align: left;">524 (47.9%)</td>
+<td style="text-align: left;">184 (16.8%)</td>
+<td style="text-align: left;">144 (13.2%)</td>
+<td style="text-align: left;">90 (8.2%)</td>
+<td style="text-align: left;">63 (5.8%)</td>
+<td style="text-align: left;">68 (6.2%)</td>
+<td style="text-align: left;">15 (1.4%)</td>
+<td style="text-align: left;">7 (0.6%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Vigorous Training</td>
-<td style="text-align: left;">1066 (57.6%)</td>
-<td style="text-align: left;">197 (10.6%)</td>
-<td style="text-align: left;">197 (10.6%)</td>
-<td style="text-align: left;">145 (7.8%)</td>
-<td style="text-align: left;">87 (4.7%)</td>
-<td style="text-align: left;">110 (5.9%)</td>
-<td style="text-align: left;">34 (1.8%)</td>
-<td style="text-align: left;">16 (0.9%)</td>
+<td style="text-align: left;">616 (56.3%)</td>
+<td style="text-align: left;">110 (10.1%)</td>
+<td style="text-align: left;">109 (10.0%)</td>
+<td style="text-align: left;">87 (8.0%)</td>
+<td style="text-align: left;">60 (5.5%)</td>
+<td style="text-align: left;">79 (7.2%)</td>
+<td style="text-align: left;">24 (2.2%)</td>
+<td style="text-align: left;">9 (0.8%)</td>
 </tr>
 </tbody>
 </table>
 
 
 </div>
-</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Physical_Activity_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption">Figure 9.1. Physical Activity Patterns.</figcaption>
+<figcaption>Figure 9.1. Physical Activity Patterns.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>Survey Questions:</strong> <em>On how many of the past 7 days did you: (Please mark the appropriate column for each row)</em></p>
 <ul>
-<li><p><em>Do moderate-intensity cardio or aerobic exercise (caused a noticeable increase in heart rate, such as brisk walk) for at least 30 minutes?</em> (n=1860, 88% of 2110 reporting)</p></li>
-<li><p><em>How often did you do 8-10 strength training exercises (such as resistance weight machines) for at least 8 repetitions each?</em> (n=1852, 88% of 2110 reporting)</p></li>
-<li><p><em>How often did you do vigorous-intensity cardio or aerobic exercise (caused large increases in breathing or heart rate, such as jogging) for at least 20 minutes?</em> (n=1852, 88% of 2110 reporting)</p></li>
+<li><p><em>Do moderate-intensity cardio or aerobic exercise (caused a noticeable increase in heart rate, such as brisk walk) for at least 30 minutes?</em> (n=1096, 89% of 1238 reporting)</p></li>
+<li><p><em>How often did you do 8-10 strength training exercises (such as resistance weight machines) for at least 8 repetitions each?</em> (n=1094, 88% of 1238 reporting)</p></li>
+<li><p><em>How often did you do vigorous-intensity cardio or aerobic exercise (caused large increases in breathing or heart rate, such as jogging) for at least 20 minutes?</em> (n=1094, 88% of 1238 reporting)</p></li>
 </ul>
 <p><strong>Additional Notes:</strong> For each exercise type, students had the option to select anywhere from zero days per week to seven days per week. In the table, percentages are calculated across rows.</p>
-<p><strong>Summary:</strong> The majority of students reported doing moderate-intensity exercises at least once in the past seven days, and 565 (30.4%) reported doing this zero times. About half the students reported doing strength training exercises at least once in the past 7 days, and 898 (48.4%) reported doing this zero times. Less than half of the students reported doing vigorous-intensity cardio or aerobic exercises at least once in the past 7 days, and 1066 (57.6%) reported doing this zero times.</p>
+<p><strong>Summary:</strong> The majority of students reported doing moderate-intensity exercises at least once in the past seven days, and 333 (30.4%) reported doing this zero times. About half the students reported doing strength training exercises at least once in the past 7 days, and 524 (47.9%) reported doing this zero times. Less than half of the students reported doing vigorous-intensity cardio or aerobic exercises at least once in the past 7 days, and 616 (56.3%) reported doing this zero times.</p>
 <p><br></p>
 </section>
 <section id="weekly-physical-activity" class="level2">
@@ -281,14 +289,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Physical_Activity_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="480"></p>
-<figcaption class="figure-caption">Figure 9.2. Weekly Physical Activity (n=1839, 87% of 2110 reporting)</figcaption>
+<figcaption>Figure 9.2. Weekly Physical Activity (n=1087, 88% of 1238 reporting)</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>Survey Questions:</strong> <em>See Questions Above</em></p>
 <p><strong>Additional Notes:</strong> This variable was created using the variables in the <a href="#Physical-Activity-Type">Physical Activity Type</a> section. Anyone who performed any type of weekly physical activity (moderate-intensity, strength training, or vigorous-intensity) for one or more days was set to “Yes,” and anyone who performed no physical activity per week was set to “No.”</p>
-<p><strong>Summary:</strong> A total of 1330 (72.3%) students performed any type of physical activity at least once per week, while 509 (27.7%) performed no weekly physical activity.</p>
+<p><strong>Summary:</strong> A total of 784 (72.1%) students performed any type of physical activity at least once per week, while 303 (27.9%) performed no weekly physical activity.</p>
 <p><br></p>
 <hr>
 </section>
@@ -342,18 +350,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -385,11 +382,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -399,8 +435,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -412,7 +457,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -456,6 +624,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -481,6 +650,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -541,6 +736,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
