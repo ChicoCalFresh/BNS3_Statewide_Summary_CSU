@@ -138,7 +138,6 @@ huxtable(tmp, add_rownames = "") %>% set_background_color(2:12, 2:9, "tomato") %
 
 ## CalFresh Food Eligibility {#calfresh-food-eligibility}
 
-<div class = "row">
 
 ::: col-md-6
 ```{r}
@@ -146,7 +145,7 @@ huxtable(tmp, add_rownames = "") %>% set_background_color(2:12, 2:9, "tomato") %
 
 c1 <- data.frame(bns$calfresh_eligible) %>% na.omit()
 c1 <- c1 %>% mutate(ifelse(bns.calfresh_eligible==0, "No", "Yes"))
-plot_frq(c1$`ifelse(bns.calfresh_eligible == 0, "No", "Yes")`, geom.colors = plot_color,  ylim=c(0,1600)) + 
+plot_frq(c1$`ifelse(bns.calfresh_eligible == 0, "No", "Yes")`, geom.colors = plot_color,  ylim=c(0,1000)) + 
   xlab('Likely Eligible for CalFresh Food') + ylab("Number of Students")
 ```
 :::
@@ -227,7 +226,7 @@ Only students who reported currently using CalFresh Food or used it in the past 
 #| fig-cap-location: top
 #| fig-cap: !expr sprintf("%s CalFresh Food Application Household Size %s & %s Number of People Fed Through EBT %s.", NextFigure(), print_n_reporting('q47'), NextFigure(), print_n_reporting('fed_through_EBT'))
 #| fig-width: 9
-p1 <- plot_frq(bns$q47, geom.colors = plot_color, wrap.title = 40, ylim=c(0,500), wrap.labels = 15) +
+p1 <- plot_frq(bns$q47, geom.colors = plot_color, wrap.title = 40, ylim=c(0,250), wrap.labels = 15) +
   xlab('\nDid you apply for CalFresh EBT as an individual \nor with other people in your household?') + ylab("Number of Students")
 p2 <- plot_frq(bns$fed_through_EBT, geom.colors = plot_color, wrap.title = 40) + 
   xlab('\nHow many people in the household are regularly \nfed through your CalFresh EBT card?')
@@ -306,7 +305,7 @@ bns$q50_tmp <- recode(bns$q50, "Strongly agree" = "Strongly \nagree",
                       "Strongly disagree" = "Strongly \ndisagree",
                       "Neither agree nor disagree" = "Neither agree \nnor disagree")
   
-p3 <- plot_frq(bns$q50_tmp, geom.colors = plot_color, ylim=c(0,200)) + 
+p3 <- plot_frq(bns$q50_tmp, geom.colors = plot_color, ylim=c(0,115)) + 
   xlab('\nI feel that the amount that is added to my CalFresh EBT card each \nmonth is enough money to provide healthy food for the month.') + 
   theme(axis.text=element_text(size=9), #change font size of axis text
         axis.title=element_text(size=9))  + #change font size of axis titles
@@ -314,7 +313,7 @@ p3 <- plot_frq(bns$q50_tmp, geom.colors = plot_color, ylim=c(0,200)) +
 
 
 
-p4 <- plot_frq(bns$q51, geom.colors = plot_color, ylim=c(0, 210), wrap.labels = 12) + 
+p4 <- plot_frq(bns$q51, geom.colors = plot_color, ylim=c(0, 115), wrap.labels = 12) + 
   xlab('\nWhen do you typically use up the balance \non your CalFresh EBT card?')+ 
   theme(axis.text=element_text(size=9), #change font size of axis text
         axis.title=element_text(size=9)) #change font size of axis titles
