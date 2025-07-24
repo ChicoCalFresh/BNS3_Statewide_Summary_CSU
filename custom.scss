@@ -11,14 +11,14 @@ $link: #0000EE;
 // Links
 
 $link-color:    $link !default;
-$toc-color:     $cf_green !default;
-$navbar-bg:     $cf_purple !default;
+$toc-color:     $chc_red !default;
+$navbar-bg:     $chc_red !default;
 
  
 /*-- scss:rules --*/
  
 h2 {
-    color: $cf_green;
+    color: $chc_red;
     font-size: 30px;
     font-weight: bold;
       opacity: 1;
@@ -26,14 +26,15 @@ h2 {
 
 
 h1 {
-  color: $cf_green;
+  color: $chc_red;
+  font-size: 30px;
   text-align: center;
   opacity: 1;
 }
 
 
 .subtitle {
-    color: $cf_green;
+    color: $chc_red;
     text-align: center;
     font-size: 35px;
     font-weight: bold;
