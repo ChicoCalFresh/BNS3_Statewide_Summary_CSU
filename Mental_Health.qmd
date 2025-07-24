@@ -234,7 +234,7 @@ plot_frq(bns$PHQ9, geom.colors = plot_color, ylim=c(0,650), wrap.labels = 14) + 
 
 ```{r}
 #| fig-cap: !expr sprintf("%s Suicidal Thoughts %s.", NextFigure(), print_n_reporting('q110'))
-plot_frq(bns$q110, geom.colors = plot_color, ylim=c(0,300), wrap.labels = 16, sort.frq = 'desc') + xlab('') + ylab("Number of Students")
+plot_frq(bns$q110, geom.colors = plot_color, ylim=c(0,300), wrap.labels = 16, sort.frq = 'desc', drop.empty = FALSE) + xlab('') + ylab("Number of Students")
 ```
 
 
@@ -380,7 +380,7 @@ kable() %>% kable_styling(bootstrap_options = "striped")
 
 **Additional Notes:** This question was displayed only to students who selected "Yes" to using campus-based mental health services (see [Mental Health Services Use](#MHS-Use)).
 
-**Summary:** Of those who reported using campus-based mental health services, `r get_count_and_percent(bns$counseling_one_on_one, "1")` reported using one-on-one counseling, `r get_count_and_percent(bns$counseling_drop_in, "1")` reported using drop-in counseling, `r get_count_and_percent(bns$counseling_other, "1")` reported using other support services, and `r get_count_and_percent(bns$counseling_group, "1")` reported using group counseling. 
+**Summary:** Of those who reported using campus-based mental health services, `r get_count_and_percent(bns$counseling_one_on_one, "1")` reported using one-on-one counseling, `r get_count_and_percent(bns$counseling_drop_in, "1")` reported using drop-in counseling, `r get_count_and_percent(bns$counseling_group, "1")` reported using group counseling, and `r get_count_and_percent(bns$counseling_other, "1")` reported using other support services. 
 
 ---
 

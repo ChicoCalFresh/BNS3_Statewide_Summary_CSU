@@ -1,5 +1,5 @@
 ---
-title: "Exploration of Students Eligible for but Not Receiving CalFresh"
+title: "Exploration of CSU Students Eligible for but Not Receiving CalFresh"
 format:
   html:
     anchor-sections: false
@@ -79,16 +79,14 @@ tmp <- tmp %>%
 
 ## Overview
 
-This page provides a brief description of characteristics of 836 students that were determined to be likely eligible for CalFresh but not currently using it at the time of the survey. See the [CalFresh Food Eligibility](CalFresh.qmd#calfresh-food-eligibility) page for eligibility criteria and related survey question text. All participating college students were either in the Educational Opportunity Program (EOP) at the UC or CSU systems or in the Extended Opportunity Programs and Services (EOPS) in the CCC systems.
+This page provides a brief description of characteristics of the `r table(df_eligible_not_using$calfresh_eligible)["1"]` **CSU students** that were determined to be likely eligible for CalFresh but not currently using it at the time of the survey. See the [CalFresh Food Eligibility](CalFresh.qmd#calfresh-food-eligibility) page for eligibility criteria and related survey question text. All participating college students were in the Educational Opportunity Program (EOP). 
 
-Of the 1341 students who were likely eligible for CalFresh, 1289 responded to a survey question inquiring about their knowledge/use of CalFresh benefits and `r chcRne::count_and_percent(df_cf_eligible$q46_1, values = c("Used it before attending college", "Heard of it, but never used it", "Used it in the past as a college student", "Never heard of it"))` did not report currently using CalFresh as a college student. 55 of the 1341 students who were likely eligible for CalFresh either did not finish the survey or selected "Prefer not to answer" for this question.
+Of the `r get_count_and_percent(bns$calfresh_eligible, "1")` students who were likely eligible for CalFresh, only `r chcRne::count_and_percent(df_cf_eligible$q46_1, values = c("Currently use as a college student"))` were currently using CalFresh as a college student . A total of `r sum(is.na(df_cf_eligible$q46_1))` students of the `r table(df_cf_eligible$calfresh_eligible)["1"]` students who were likely eligible for CalFresh either did not finish the survey or selected "Prefer not to answer" for the CalFresh Food usage question and were omitted from the results. 
 
 *See [Information on Missing Data](index.qmd#md)*
 
 
 ## Proportion of students likely eligible but not receiving CalFresh by campus
-
-The participation distribution for these 836 likely eligible but not receiving students is the same as the overall distribution of all participating students from each of the 12 campuses. The only exceptions are Clovis Community College and Butte College. See [College Campus](Academic_Profile.qmd#college-campus) for the distribution of all participating students.
 
 
 
@@ -115,7 +113,7 @@ summarized_data <- tmp3 %>%
 summarized_data |> ggplot(aes(x = school2, y = pct, fill = sector)) +
   geom_col() + geom_text(aes(label = npct), hjust = -0.05) + 
   coord_flip() + theme_bw() + xlab("School") + ylab("Proportion of students likely eligible but not receiving CalFresh (%)") +
-  scale_fill_manual(values = c('gold', '#9D2235', '#4895EF'), name = 'School Types', labels = c('CCC', 'CSU', 'UC')) + scale_y_continuous(
+  scale_fill_manual(values = c('#9D2235', '#9D2235', '#4895EF'), name = 'School Types', labels = c('CSU', 'CSU', 'UC')) + scale_y_continuous(
     limits = c(0, 1),
     labels = scales::percent_format(accuracy = 1),
     )
@@ -132,7 +130,7 @@ sector_sum <- summarized_data %>%
          ) |> as.data.frame()
 ```
 
-**Summary: ** Across participating CSU campuses `r sector_sum[sector_sum$sector == "CSU", "npct"]` of likely CalFresh eligible college students reported not currently using CalFresh. These numbers were `r sector_sum[sector_sum$sector == "CCC", "npct"]` and `r sector_sum[sector_sum$sector == "UC", "npct"]` for CCC an UC campuses, respectively.
+**Summary: ** Across participating CSU campuses `r sector_sum[sector_sum$sector == "CSU", "npct"]` of likely CalFresh eligible college students reported not currently using CalFresh.
 
 <br/>
 
@@ -168,7 +166,7 @@ gghistogram(df_eligible_not_using,
 
 **Additional Notes: ** Student age was determined by the difference between birth date and the time in which the survey was completed. Values were rounded down to the nearest whole number. 
 
-**Summary: ** The average age of the students was `r round(mean(df_eligible_not_using$age, na.rm = TRUE),1)` years with a range of `r min(df_eligible_not_using$age, na.rm = TRUE)` to `r max(df_eligible_not_using$age, na.rm = TRUE)`, and a median age of `r median(df_eligible_not_using$age)`. A total of `r get_count_and_percent3(df_eligible_not_using$age, 21)` students were 21 or older, and `r get_count_and_percent3(df_eligible_not_using$age, 30)` students were 30 or older. Mean ages differed between campus types, where the mean age among CSU students was `r round(mean(bns_CSU$age, na.rm = TRUE),1)`, compared to `r round(mean(bns_CCC$age, na.rm = TRUE),1)` among CCC students, and `r round(mean(bns_UC$age, na.rm = TRUE),1)` among UC students. 
+**Summary: ** The average age of the students was `r round(mean(df_eligible_not_using$age, na.rm = TRUE),1)` years with a range of `r min(df_eligible_not_using$age, na.rm = TRUE)` to `r max(df_eligible_not_using$age, na.rm = TRUE)`, and a median age of `r median(df_eligible_not_using$age)`. A total of `r get_count_and_percent3(df_eligible_not_using$age, 21)` students were 21 or older, and `r get_count_and_percent3(df_eligible_not_using$age, 30)` students were 30 or older. 
 
 <br/>
 
@@ -254,17 +252,37 @@ qlabel <- c('No time to complete the application/ application is too long.',
 
 
 
-# chcRne::nperc_tbl_MATA(df = df_eligible_not_using, 
+# chcRne::nperc_tbl_MATA(df = df_eligible_not_using,
 #                vars = c(calfresh_barrier_no_time_app:calfresh_barrier_friends_think_less_of_me),
 #                row.names = qlabel,
-#                value = 1) %>% 
-#   rename(Barrier = col, `Yes (%)` = npct) %>% head(10) %>% kable() %>% 
-#   kable_styling(bootstrap_options = "striped") %>% 
+#                value = 1) %>%
+#   rename(Barrier = col, `Yes (%)` = npct) %>% head(10) %>% kable() %>%
+#   kable_styling(bootstrap_options = "striped") %>%
 #   column_spec(2, width='3.5cm')
+
+
+prep_binary_vars_tmp <- function(question, xlabels, punc = " ") {
+  df_eligible_not_using %>%  summarize(across(contains(question),
+                            list(x = ~ sum(.x, na.rm=TRUE),  # count how many 1's
+                                 n = ~ sum(!is.na(.x))), # count how many non-missing values
+                            .names = "{.fn}_{.col}")) %>% # specify the new variable names according to which function it's using
+    pivot_longer(everything()) %>% # rshape to long format to have one variable for name, and one for value
+    mutate(str = substr(name, 1, 1), # extract x and n from the 'name', 
+           #name = gsub(paste0("x_", question, "_|n_", question, "_"), "", name)) %>% # clean variable name (keep actual variable in context)
+           name = gsub("x_|n_", "", name)) %>% 
+    pivot_wider(id_cols = name, values_from = value, names_from = str) %>% # pivot back wide so one column for x and one for n
+    mutate(pct = x/n, # calculate percent and label
+           pct_lab = paste0(x, "\n(", percent(pct, accuracy=.1),")"), 
+           xlab = paste0(xlabels, " (n = ", n, ")", punc), 
+           xlab = fct_reorder(xlab, desc(x))) %>% arrange(desc(x))
+}
+
+
+
 
 question <- "calfresh_barrier"
 
-cf_barrier_vars <- prep_binary_vars(question, qlabel) ## Issues here
+cf_barrier_vars <- prep_binary_vars_tmp(question, qlabel) ## Issues here
 
 
 # Plot table of Percentages
@@ -277,7 +295,7 @@ kable() %>% kable_styling(bootstrap_options = "striped") %>%  column_spec(2, wid
 
 **Additional Notes:** Only students who reported that they *Never heard of CalFresh;* *Heard of it, but never used it;* or *Used it before attending college* saw this question (See [CalFresh Food Status section](CalFresh.qmd#cal_status_reference)).
 
-**Summary: ** The most common reason for students who were likely eligible for CalFresh Food, but reported not using CalFresh Food was because they did not think they are eligible, where `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_do_not_think_eligible, value=1)` students selected this option. Meanwhile `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_no_time_app, value=1)` reported that they have no time to complete the application and `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_other_students_need, value=1)` students reported that they felt other students need CalFresh Food more than they do.
+**Summary: ** The most common reason for students who were likely eligible for CalFresh Food, but reported not using CalFresh Food was because they did not think they are eligible, where `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_do_not_think_eligible, value=1)` students selected this option. Meanwhile, `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_other_students_need, value=1)` students reported that they felt other students need CalFresh Food more than they do, and `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_no_time_app, value=1)` reported that they have no time to complete the application.
 
 <br/>
 

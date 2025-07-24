@@ -290,7 +290,7 @@ plot_likert(questions,
 
 **Additional Notes:** Only students who reported that they *Never heard of Medi-Cal; Heard of it, but never used it; or Used it before attending college* saw this question (See [Basic Needs](#Basic-Needs) section).
 
-**Summary:** A total of `r get_count_and_percent(bns$no_medical_unknown, "1")` students did not use Medi-Cal because they did not know what Medi-Cal was or they already had another health insurance. Meanwhile, `r get_count_and_percent(bns$no_medical_dont_need, "1")` reported not needing Medi-Cal, and `r get_count_and_percent(bns$no_medical_eligible, "1")` did not think they were eligible.
+**Summary:** A total of `r get_count_and_percent(bns$no_medical_unknown, "1")` students did not use Medi-Cal because they did not know what Medi-Cal was or they already had another health insurance. Meanwhile, `r get_count_and_percent(bns$no_medical_eligible, "1")` did not think they were eligible, and `r get_count_and_percent(bns$no_medical_dont_need, "1")` reported not needing Medi-Cal. 
 
 
 

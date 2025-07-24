@@ -59,7 +59,7 @@ names(questions1) <- c("I have a secure place to store fresh food and pantry ite
                       "I almost always skip meals.",
                       "No one cooks at home.")
 plot_likert(questions1,
-            grid.range = c(1.5, 1.2),
+            grid.range = c(1.2, 1.5),
             wrap.legend.labels = 20,
             expand.grid = FALSE,
             values = "sum.outside",
@@ -80,7 +80,7 @@ names(questions) <- c("I do not regularly have access to a kitchen where I can p
                       "I don't cook or shop for food.",
                       "I do not think about my eating/food habits.")
 plot_likert(questions,
-            grid.range = c(1.5, 1.2),
+            grid.range = c(1.2, 1.5),
             wrap.legend.labels = 20,
             expand.grid = FALSE,
             values = "sum.outside",
