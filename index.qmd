@@ -94,11 +94,6 @@ Please reach out to our PI, Stephanie Bianco [sbianco\@csuchico.edu]{style="colo
 
 Center for Healthy Communities. (2023). Statewide Basic Needs and Student Success Survey, CSU Results.  https://chicocalfresh.github.io/BNS3_Statewide_Summary_CSU/
 
-## Related Work
-
-- [Statewide Basic Needs and Student Success Survey](https://chicocalfresh.github.io/BNS3_Statewide_Summary/)
-- [CSU Exploration of Students Eligible for but Not Receiving CalFresh](eligible_not_receiving.html)
-
 <br/>
 
 ::: columns

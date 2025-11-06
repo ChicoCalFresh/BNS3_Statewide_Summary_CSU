@@ -81,7 +81,7 @@ tmp <- tmp %>%
 
 This page provides a brief description of characteristics of the `r table(df_eligible_not_using$calfresh_eligible)["1"]` **CSU students** that were determined to be likely eligible for CalFresh but not currently using it at the time of the survey. See the [CalFresh Food Eligibility](CalFresh.qmd#calfresh-food-eligibility) page for eligibility criteria and related survey question text. All participating college students were in the Educational Opportunity Program (EOP). 
 
-Of the `r get_count_and_percent(bns$calfresh_eligible, "1")` students who were likely eligible for CalFresh, only `r chcRne::count_and_percent(df_cf_eligible$q46_1, values = c("Currently use as a college student"))` were currently using CalFresh as a college student . A total of `r sum(is.na(df_cf_eligible$q46_1))` students of the `r table(df_cf_eligible$calfresh_eligible)["1"]` students who were likely eligible for CalFresh either did not finish the survey or selected "Prefer not to answer" for the CalFresh Food usage question and were omitted from the results. 
+Of the `r get_count_and_percent(bns$calfresh_eligible, "1")` students who were likely eligible for CalFresh, only `r chcRne::count_and_percent(df = df_cf_eligible, var = q46_1, values = c("Currently use as a college student"))` were currently using CalFresh as a college student . A total of `r sum(is.na(df_cf_eligible$q46_1))` students of the `r table(df_cf_eligible$calfresh_eligible)["1"]` students who were likely eligible for CalFresh either did not finish the survey or selected "Prefer not to answer" for the CalFresh Food usage question and were omitted from the results. 
 
 *See [Information on Missing Data](index.qmd#md)*
 
@@ -181,7 +181,7 @@ plot_frq(rec$q7, sort.frq="desc", geom.colors = CF_green) + xlab("") + ylab("Num
 ```
 **Survey question: ** *What is your gender identity?*
 
-**Summary: ** A total of `r chcRne::count_and_percent(rec$q7, 'Woman')` students identified as a woman, `r chcRne::count_and_percent(rec$q7, 'Man')` identified as a man, `r chcRne::count_and_percent(rec$q7, 'Non-binary')` identified as gender non-binary, and `r chcRne::count_and_percent(rec$q7, 'Queer or Nonconforming')` identified as queer/non-conforming.
+**Summary: ** A total of `r chcRne::count_and_percent(df = rec, var = q7, values =  'Woman')` students identified as a woman, `r chcRne::count_and_percent(df = rec, var = q7, values = 'Man')` identified as a man, `r chcRne::count_and_percent(df = rec, var = q7, values = 'Non-binary')` identified as gender non-binary, and `r chcRne::count_and_percent(df = rec, var = q7, values = 'Queer or Nonconforming')` identified as queer/non-conforming.
 
 <br/>
 
@@ -201,7 +201,7 @@ plot_frq(tmp$hispanic, geom.colors = CF_green) + xlab("") + ylab("Number of Stud
 
 **Additional Notes: ** Possible answers were pulled from the U.S. Census questionnaire assessing Hispanic Origin: *Mexican; Mexican American; Chicano; Puerto Rican; Cuban; another Hispanic/Latino/Spanish origin; or not of Hispanic/Latino/Spanish origin.* 
 
-**Summary: ** A total of `r chcRne::count_and_percent(tmp$hispanic, values='Hispanic')` students self-identified as having Hispanic Origins and `r chcRne::count_and_percent(tmp$hispanic, values='Non-Hispanic')` students self-identified as Non-Hispanic. 
+**Summary: ** A total of `r chcRne::count_and_percent(df = tmp, var = hispanic, values='Hispanic')` students self-identified as having Hispanic Origins and `r chcRne::count_and_percent(df = tmp, var = hispanic, values='Non-Hispanic')` students self-identified as Non-Hispanic. 
 
 <br/>
 
@@ -221,7 +221,7 @@ plot_frq(tmp3$firstgen, geom.colors = CF_green, ylim=c(0, 900)) + xlab('') + yla
 
 **Additional Notes: ** Students who selected their parents' education  as "Less than high school," "High school diploma or GED," "Some college," "Certificate or technical achievement without Associate's degree," or "Associate's degree" were considered first-generation.
 
-**Summary: ** A total of `r chcRne::count_and_percent(tmp3$firstgen, 'First Gen')` students reported first-generation status.
+**Summary: ** A total of `r chcRne::count_and_percent(df = tmp3, var = firstgen, values = 'First Gen')` students reported first-generation status.
 
 <br/>
 
@@ -295,7 +295,7 @@ kable() %>% kable_styling(bootstrap_options = "striped") %>%  column_spec(2, wid
 
 **Additional Notes:** Only students who reported that they *Never heard of CalFresh;* *Heard of it, but never used it;* or *Used it before attending college* saw this question (See [CalFresh Food Status section](CalFresh.qmd#cal_status_reference)).
 
-**Summary: ** The most common reason for students who were likely eligible for CalFresh Food, but reported not using CalFresh Food was because they did not think they are eligible, where `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_do_not_think_eligible, value=1)` students selected this option. Meanwhile, `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_other_students_need, value=1)` students reported that they felt other students need CalFresh Food more than they do, and `r chcRne::count_and_percent(df_eligible_not_using$calfresh_barrier_no_time_app, value=1)` reported that they have no time to complete the application.
+**Summary: ** The most common reason for students who were likely eligible for CalFresh Food, but reported not using CalFresh Food was because they did not think they are eligible, where `r chcRne::count_and_percent(df = df_eligible_not_using, var = calfresh_barrier_do_not_think_eligible, values=1)` students selected this option. Meanwhile, `r chcRne::count_and_percent(df = df_eligible_not_using, var = calfresh_barrier_other_students_need, values=1)` students reported that they felt other students need CalFresh Food more than they do, and `r chcRne::count_and_percent(df = df_eligible_not_using, var = calfresh_barrier_no_time_app, values=1)` reported that they have no time to complete the application.
 
 <br/>
 
